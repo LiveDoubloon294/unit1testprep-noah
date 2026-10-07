@@ -34,6 +34,10 @@ public class LunchTime {
      */
     public LunchTime() {
         // TODO: Initialize all four instance variables.
+        numNugs = 30;
+        mysterySauce = 9.5;
+        enoughNugs = true;
+        entreeName = "Nuggets of Glory";
     }
 
 
@@ -42,6 +46,11 @@ public class LunchTime {
      */
     public LunchTime(int nugs, double sauce, boolean enough, String name) {
         // TODO: Set all four instance variables using the parameters.
+        numNugs = nugs;
+        mysterySauce = sauce;
+        enoughNugs = enough;
+        entreeName = name;
+        
     }
 
 
@@ -59,7 +68,7 @@ public class LunchTime {
      */
     public int getEntreeNameLength() {
         // TODO
-        return 0;
+        return entreeName.length();
     }
 
 
@@ -79,7 +88,7 @@ public class LunchTime {
      */
     public String getEntreeSubstring(int start, int end) {
         // TODO
-        return "";
+        return entreeName.substring(start, end);
     }
 
 
@@ -95,7 +104,7 @@ public class LunchTime {
      */
     public int containsNug() {
         // TODO
-        return 0;
+        return entreeName.indexOf("Nug"); // will print -1 if not there right?
     }
 
 
@@ -112,7 +121,7 @@ public class LunchTime {
      */
     public int compareLunchNames(String otherLunch) {
         // TODO
-        return 0;
+        return entreeName.compareTo(otherLunch);
     }
 
 
@@ -127,7 +136,7 @@ public class LunchTime {
      */
     public boolean isSameLunch(String otherLunch) {
         // TODO
-        return false;
+        return entreeName.equals(otherLunch);
     }
 
 
@@ -155,7 +164,7 @@ public class LunchTime {
        */
       public int cafeteriaRandomness(int lowNugs, int highNugs) {
           // TODO: return a random integer from lowNugs through highNugs
-          return 0;
+          return (int) (Math.random() * (highNugs - lowNugs + 1)) + lowNugs;
       }
 
 
@@ -169,7 +178,7 @@ public class LunchTime {
      */
     public double nuggetPower(double power) {
         // TODO
-        return 0.0;
+        return Math.pow(numNugs, power);
     }
 
     /**
@@ -179,7 +188,7 @@ public class LunchTime {
      */
     public boolean gotEnoughNugs() {
         // TODO
-        return false;
+        return enoughNugs;
     }
 
 
@@ -216,7 +225,11 @@ public class LunchTime {
      */
     public String secretLunchCode(int codeLength) {
         // TODO
-        return "";
+        String secretCode;
+        for (int i = 0; i < codeLength; i++){
+           secretCode += (char) ((int) (Math.random() * 26) + 917601);
+        }
+        return secretCode;
     }
 
 
@@ -249,7 +262,7 @@ public class LunchTime {
      */
     public double sauceCatastrophe(double saucePower, double nugPower) {
         // TODO
-        return 0.0;
+        return Math.abs(Math.pow(mysterySauce, saucePower) - Math.pow(numNugs, nugPower));
     }
 
 
@@ -277,7 +290,7 @@ public class LunchTime {
     public double distanceToNuggets(double studentX, double studentY,
                                     double nugX, double nugY) {
         // TODO
-        return 0.0;
+        return Math.sqrt(Math.pow(nugX - studentX, 2) + Math.pow(nugY - studentY, 2));
     }
 
 
@@ -289,11 +302,12 @@ public class LunchTime {
 
         // TODO:
         // Create a LunchTime object using the no-argument constructor.
-
+        LunchTime nuggetMeal = new LunchTime();
 
         // TODO:
         // Create another LunchTime object using the constructor
         // with parameters.
+        LunchTime nuggetMeal = new LunchTime(1, 100.0, true, "Super Nugget");
         //
         // Feel free to invent an appropriately terrible cafeteria
         // entree name.
@@ -303,7 +317,7 @@ public class LunchTime {
         // Call EVERY non-challenge method at least once.
         //
         // Print the results so you can verify that your methods work.
-
+        System.out.println("Entree Name length: " + nuggetMeal.getEntreeNameLength());
 
         // OPTIONAL:
         // Attempt the four challenges if you are feeling powerful.
