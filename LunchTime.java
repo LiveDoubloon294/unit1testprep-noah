@@ -225,7 +225,7 @@ public class LunchTime {
      */
     public String secretLunchCode(int codeLength) {
         // TODO
-        String secretCode;
+        String secretCode = "";
         for (int i = 0; i < codeLength; i++){
            secretCode += (char) ((int) (Math.random() * 26) + 917601);
         }
@@ -302,7 +302,7 @@ public class LunchTime {
 
         // TODO:
         // Create a LunchTime object using the no-argument constructor.
-        LunchTime nuggetMeal = new LunchTime();
+        LunchTime nuggetMealDefault = new LunchTime();
 
         // TODO:
         // Create another LunchTime object using the constructor
@@ -318,10 +318,20 @@ public class LunchTime {
         //
         // Print the results so you can verify that your methods work.
         System.out.println("Entree Name length: " + nuggetMeal.getEntreeNameLength());
-
+        System.out.println("Substring: " + nuggetMeal.getEntreeSubstring(0, 5));
+        System.out.println("Contains Nug: " + nuggetMeal.containsNug());
+        System.out.println("Compare Nugs: " + nuggetMeal.compareLunchNames("Frenzy Fried Chicken"));
+        System.out.println("Same Lunch: " + nuggetMeal.isSameLunch("Super Nougat"));
+        System.out.println("Random Int: " + nuggetMeal.cafeteriaRandomness(0, 10));
+        System.out.println("Nugget Power: " + nuggetMeal.nuggetPower(2));
+        System.out.println("Enough Nugs: " + nuggetMeal.gotEnoughNugs());
+         
         // OPTIONAL:
         // Attempt the four challenges if you are feeling powerful.
-
+         System.out.println("Challenges!");
+         System.out.println(nuggetMeal.secretLunchCode(6));
+         System.out.println(nuggetMeal.sauceCatastrophe(4, nuggetMeal.nuggetPower(2)));
+         System.out.println(nuggetMeal.distanceToNuggets(0, 0, 96.5, 12.7));
 
         // IMPORTANT:
         // Java cannot actually provide you with chicken nuggets.
