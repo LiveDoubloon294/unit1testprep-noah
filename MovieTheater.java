@@ -393,19 +393,19 @@ public class MovieTheater {
         //
         // Print the results so you can verify
         // that your methods work.
-        ticket.getMovieTitleLength();
-        ticket.getMovieSubstring(9, 13);
-        ticket.findOf();
-        ticket.compareMovieTitles("Forgotten Island");
-        ticket.isSameMovie("Forgotten Island");
-        ticket.randomTicketPrice(10, 15);
-        ticket.ticketPricePower(3);
-        ticket.ticketPriceRipoff(6.5);
-        ticket.isWorthWatching();
+        System.out.println(ticket.getMovieTitleLength());
+        System.out.println(ticket.getMovieSubstring(9, 13));
+        System.out.println(ticket.findOf());
+        System.out.println(ticket.compareMovieTitles("Forgotten Island"));
+        System.out.println(ticket.isSameMovie("Forgotten Island"));
+        System.out.println(ticket.randomTicketPrice(10, 15));
+        System.out.println(ticket.ticketPricePower(3));
+        System.out.println(ticket.ticketPriceRipoff(6.5));
+        System.out.println(ticket.isWorthWatching());
 
         // OPTIONAL:
         // Attempt all four challenges.
-
+        
 
         // FINAL WARNING:
         // If your program crashes, you do NOT get a refund.
