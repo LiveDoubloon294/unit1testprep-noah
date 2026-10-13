@@ -22,7 +22,7 @@ public class MathStringLab {
     // HINT: Use Math.random() to generate an index.
     // Example: text="Ballard" → could return 'l'
     public String randomCharacter() {
-      int randIndex = (int) Math.random() * text.length();
+      int randIndex = (int) (Math.random() * text.length());
       return text.substring(randIndex, randIndex + 1);
 
     }
